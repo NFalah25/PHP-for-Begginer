@@ -119,6 +119,33 @@ Untuk pemanggilan array asosiatif dengan menggunakan perulangan ```foreach``` :
 </ul>
 ```
 
+## Video 8 => Function dan Filtering
+Fungsi digunakan untuk membuat blok yang berisi kode yang nantinya akan dipanggil dan mengembalikan sebuah nilai. Contoh penggunaan function : 
+```
+function filterByAuthor ($books, $author) {
+    $filteredBooks = [];
+    foreach ($books as $book){
+        if($book['author']===$author){
+            $filteredBooks[] = $book;
+        }
+    }
+    return $filteredBooks;
+}
+```
+Pada operasi ```if``` diatas menggunakan tanda ```===``` karena untuk membandingkan nilai. Sedangkan jika hanya ada tanda ```=``` maka dia akan mengubah variabel yang sudah ada
+
+Untuk pemanggilan function dapat dilakukan seperti ini : 
+```
+<ul>
+    <?php foreach (filterByAuthor($books, 'Andy Weir') as $book) : ?>
+    <li>
+        <a href="<?= $book['purchaseUrl'] ?>">
+            <?= $book['name'] ?> (<?= $book['releaserYear'] ?>) - By <?= $book['author'] ?>  
+        </a>
+    </li>
+    <?php endforeach; ?>
+</ul>
+```
 
 
 
