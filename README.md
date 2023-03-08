@@ -59,7 +59,7 @@ Boolean adalah jenis data yang hanya terdapat benar atau salah (```True``` or ``
     }
     ?>
     <h1>
-        <?php echo $message ?>
+        <?= $message ?>
     </h1>
 ```
 
