@@ -147,5 +147,16 @@ Untuk pemanggilan function dapat dilakukan seperti ini :
 </ul>
 ```
 
+## Video 9 => Lambda Function
+Fungsi lambda atau biasa disebut anonymous function adalah sebuah fungsi yang tidak diberi nama dan tidak didefinisikan secara jelas. fungsi ini dapat digunakan saat kita hanya membutuhkan pemanggilan fungsi ini satu kali atau beberapa kali
+
+```
+$filteredBooks = filter($books, function ($book){
+    return $book['releaseYear'] < 2000;
+})
+```
+Ddalam fungsi lambda diatas, $filteredBooks adalah nama variabel yang digunakan untuk menampung fungsi lambda. dan nantinya variabel ini yang akan dipanggil untuk dieksekusi
+
+
 
 
