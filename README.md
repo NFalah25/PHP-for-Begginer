@@ -109,6 +109,7 @@ Array Asosiatif adalah array yang memiliki nilai ```key``` dan ```value```. Cont
 ```
 
 Untuk pemanggilan array asosiatif dengan menggunakan perulangan ```foreach``` :
+```
 <ul>
     <?php foreach($books as $book) : ?>
         <li>
@@ -116,6 +117,7 @@ Untuk pemanggilan array asosiatif dengan menggunakan perulangan ```foreach``` :
         </li>
     <?php endforeach ?>
 </ul>
+```
 
 
 
