@@ -211,6 +211,9 @@ $filteredBooks = array_filter($books, function ($book){
 ```
 Maka kita harus menambahkan ```include "index.logic.php"``` pada file pertama baris paling atas. atau kita bisa menambahkan ```requiere "index.php"``` pada file kedua baris paling akhir.
 
+## Video 11 => Review ulang singkat dan quiz
+Nilai kuis : 
+
 
 
 
