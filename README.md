@@ -155,7 +155,61 @@ $filteredBooks = filter($books, function ($book){
     return $book['releaseYear'] < 2000;
 })
 ```
-Ddalam fungsi lambda diatas, $filteredBooks adalah nama variabel yang digunakan untuk menampung fungsi lambda. dan nantinya variabel ini yang akan dipanggil untuk dieksekusi
+Dalam fungsi lambda diatas, $filteredBooks adalah nama variabel yang digunakan untuk menampung fungsi lambda. dan nantinya variabel ini yang akan dipanggil untuk dieksekusi
+
+## Video 10 => Pemisahan logika php dari template
+Pemisahan logika php dari halaman utama yang berisi template/html dapat dilakukan dengan 2 cara yaitu menggunakan ```require "namaFile.php"``` atau dengan ```include "namaFile.php"```.
+
+Contoh jika kita 2 membuat file php. file yang pertama kita beri nama ```index.php``` dan file kedua kita beri nama ```index.logic.php```. File index kita berisi : 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+    <ul>
+        <?php foreach ($filteredBooks as $book) : ?>       
+        <li>
+            <a href="<?= $book['purchaseUrl'] ?>">
+                <?= $book['name'] ?> (<?= $book['releaseYear'] ?>) - By <?= $book['author'] ?>  
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</body>
+</html>
+```
+
+dan File kedua berisi : 
+```
+<?php 
+$books = [
+    [
+        'name' => 'Do Android Dream of Electric Sheep',
+        'author' => 'Philip K. Dick',
+        'releaseYear' => 1968,
+        'purchaseUrl' => 'http://example.com'
+    ],
+    [
+        'name' => 'Project Hail Mary',
+        'author' => 'Andy Weir',
+        'releaseYear' => 2021,
+        'purchaseUrl' => 'http://example.com'
+    ],
+    [
+        'name' => 'The Martian',
+        'author' => 'Andy Weir',
+        'releaseYear' => 2011,
+        'purchaseUrl' => 'http://example.com'
+    ],
+];
+$filteredBooks = array_filter($books, function ($book){
+    return $book['author'] === 'Andy Weir';
+});
+```
+Maka kita harus menambahkan ```include "index.logic.php"``` pada file pertama baris paling atas. atau kita bisa menambahkan ```requiere "index.php"``` pada file kedua baris paling akhir.
 
 
 
