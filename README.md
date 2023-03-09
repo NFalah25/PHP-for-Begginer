@@ -213,7 +213,7 @@ Maka kita harus menambahkan ```include "index.logic.php"``` pada file pertama ba
 
 ## Video 11 => Review ulang singkat dan quiz
 Nilai kuis : 
-
+<img width="1118" alt="quis laravel" src="https://user-images.githubusercontent.com/88817830/223885155-f77f56be-74d2-4cae-a4de-661c54afb63f.png">
 
 
 
