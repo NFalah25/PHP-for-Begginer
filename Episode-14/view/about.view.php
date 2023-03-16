@@ -1,5 +1,3 @@
-<!-- <?php include "Episode-11.view.php"?> -->
-
 <?php require('Partials/head.php') ?>
 <?php require('Partials/nav.php') ?>
 <?php require('Partials/Banner.php') ?>

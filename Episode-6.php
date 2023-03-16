@@ -16,6 +16,8 @@
                 "Hail Mary"
             ];
 
+            $books[3] = "Nasi Goreng";
+
         ?>
 
         <ul>
@@ -37,5 +39,9 @@
         <?php endforeach; ?>
 
         </ul>
+
+        <p><?= $books[3]; ?></p>
+
+        
 </body>
 </html>

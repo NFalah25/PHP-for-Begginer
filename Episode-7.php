@@ -33,5 +33,8 @@
 
     </ul>
 
+    <p><?= $books[0]["name"] ?></p>
+    
+
 </body>
 </html>

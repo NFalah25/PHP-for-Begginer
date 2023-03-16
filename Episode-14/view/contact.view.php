@@ -1,4 +1,3 @@
-<!-- <?php include "Episode-11.view.php"?> -->
 
 <?php require('Partials/head.php') ?>
   <?php require('Partials/nav.php') ?>
@@ -10,7 +9,5 @@
       <p>Hello, Welcome to the Contact Page</p>
     </div>
   </main>
-</div>
 
-</body>
-</html>
+  <?php require('Partials/footer.php') ?>
