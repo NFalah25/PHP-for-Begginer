@@ -1,8 +1,8 @@
 <?php 
+require 'function.php';
 
 $heading = "Home";
 
-echo
 
 
 require"view/index.view.php";
