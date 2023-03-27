@@ -15,4 +15,3 @@ foreach($posts as $post){
     echo "<li>" . $post['title'] . "</li>";
 }
 
-?>
